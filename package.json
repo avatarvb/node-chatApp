@@ -10,7 +10,7 @@
   "engines": {
     "node": "8.9.1"
   },
-  "author": "",
+  "author": "avatarvb",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.3",
