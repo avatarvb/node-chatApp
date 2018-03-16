@@ -2,11 +2,6 @@ var socket = io();
 
 socket.on('connect', function () {
     console.log('Connect to server');
-
-    socket.emit('createMsg', {
-      from: "avatarvb",
-      text: "Yap ca marche"
-    });
 });
 
 socket.on('disconnect', function () {
