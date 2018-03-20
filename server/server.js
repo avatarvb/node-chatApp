@@ -23,13 +23,13 @@ io.on('connection', (socket) => {
   // socket.broadcast.emit from admin text: new user joined
   socket.broadcast.emit('newMsg', {
     from: 'Admin',
-    text: ' New user joined',
+    text: 'New user joined, welcome',
     createdAt: new Date().getTime()
   })
 
 
   socket.on('createMsg', (message) => {
-    console.log('create Msg', message);
+    console.log('createMsg', message);
     io.emit('newMsg', {
       from: message.from,
       text: message.text,
