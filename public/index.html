@@ -67,28 +67,37 @@
       </div>
       <div class="row">
           <div class="col-11">
-            <!-- <form id="form-msg"> -->
-              <!-- <div class="form-group">
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-              </div> -->
-              <div class="form-group">
-                <textarea name="message" rows="6" class="form-control" id="message" placeholder="Message" autofocus autocomplete="off"></textarea>
-              </div>
-          </div>
-            <div class="col-1">
-              <button type="submit" class="btn btn-primary" id="send-btn"><i class="zmdi zmdi-mail-send"></i></button>
-              <button  type="button" class="btn btn-primary" id="geo-btn">send location</button>
-            </div>
-          </div>
-        <!-- </form> -->
+            <form id="form-msg">
+                <div class="form-group">
+                  <textarea name="message" rows="6" class="form-control" id="message" placeholder="Message" autofocus autocomplete="off"></textarea>
+                </div>
+                </div>
+                  <div class="col-1">
+                    <button type="submit" class="btn btn-primary" id="send-btn"><i class="zmdi zmdi-mail-send"></i></button>
+                    <button  type="button" class="btn btn-primary" id="geo-btn">send location</button>
+                  </div>
+                </div>
+            </form>
     </div>
+    <script id="message-template" type="text/template">
+      <div class="message">
+        <h6>{{from}} <span class="badge badge-pill badge-primary">{{createdAt}} </span></h6>
+        <p>  {{text}}</p>
+      </div>
+    </script>
+    <script id="location-message-template" type="text/template">
+      <div class="message">
+        <h6>{{from}} <span class="badge badge-pill badge-primary">{{createdAt}} </span></h6>
+        <a href="{{url}}" target="_blank">my current location </a>
+      </div>
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="/socket.io/socket.io.js" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js" charset="utf-8"></script>
     <script src="/js/index.js" charset="utf-8"></script>
   </body>
 </html>
